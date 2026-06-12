@@ -98,31 +98,6 @@ Calculated:
 * Business Metric Development
 * Data Validation
 
-### Microsoft SQL Server Concepts
-
-* Common Table Expressions (CTEs)
-* Window Functions
-* Ranking Functions
-* Aggregate Functions
-* Conditional Logic
-* Statistical Functions
-* Percentile Calculations
-* T-SQL Query Development
-
-### Functions Used
-
-* COUNT()
-* SUM()
-* AVG()
-* MIN()
-* MAX()
-* ROW_NUMBER()
-* DENSE_RANK()
-* LAG()
-* PERCENTILE_CONT()
-* CASE
-* ROUND()
-
 ---
 
 ## Key Findings
