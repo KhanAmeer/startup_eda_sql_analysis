@@ -2,7 +2,7 @@
     PROJECT : Indian Startup Funding Analysis
     PERIOD  : 2020-2024 (2025 partial, separate)
 
-    OBJECTIVE
+    OBJECTIVES
 
     Analyse startup funding patterns in India between 
     2020 and 2024 to understand:
@@ -32,6 +32,7 @@
     DATA QUALITY ASSESSMENT
     To score dataset completeness before analysis begins
 */
+
 SELECT
     ROUND(COUNT(Startup) * 100.0
         / COUNT(*), 1)                  AS startup_complete_pct,
