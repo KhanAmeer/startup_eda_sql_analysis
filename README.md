@@ -1,8 +1,8 @@
-# Startup Funding Analysis Using SQL 
+# Startup Funding Analysis Using SQL
 
 ## Overview
 
-This project performs Exploratory Data Analysis (EDA) on a startup funding dataset using Microsoft SQL Server. The objective is to analyze funding trends, investment patterns, sector performance, investor activity, and funding concentration within the startup ecosystem.
+This project performs Exploratory Data Analysis (EDA) on a sample startup funding dataset using Microsoft SQL Server. The objective is to analyze funding trends, investment patterns, sector performance, investor activity, and funding concentration within the startup ecosystem.
 
 The analysis goes beyond basic aggregations by incorporating statistical measures, funding distribution analysis, concentration metrics, and trend evaluation to generate business-oriented insights from funding data.
 
@@ -28,9 +28,13 @@ The analysis aims to answer the following business questions:
 
 Source: Kaggle Startup Funding Dataset
 
-This project uses a publicly available startup funding dataset obtained from Kaggle for educational and portfolio purposes.
+Dataset Link:
 
-Dataset Link: https://www.kaggle.com/datasets/vagdevititikshag/indian-startup-funding-dataset-20202025
+https://www.kaggle.com/datasets/vagdevititikshag/indian-startup-funding-dataset-20202025
+
+This project uses a publicly available sample startup funding dataset obtained from Kaggle for educational and portfolio purposes.
+
+The primary objective of this project is to demonstrate SQL-based exploratory data analysis, analytical thinking, and business insight generation. The findings should be interpreted within the context of the sample dataset and are not intended to represent actual startup funding activity or market conditions.
 
 The dataset contains information such as:
 
@@ -104,7 +108,7 @@ Calculated:
 
 ### Funding Concentration
 
-Startup funding is highly concentrated among a relatively small number of companies, indicating that a significant portion of capital flows to a limited group of startups.
+Funding was highly concentrated among a relatively small number of startups within the sample dataset, indicating that a significant share of capital was allocated to a limited group of companies.
 
 ### Funding Distribution
 
@@ -112,19 +116,19 @@ Median funding values were substantially lower than average funding values, sugg
 
 ### Sector Performance
 
-Investment activity was concentrated in a small number of sectors, highlighting investor preferences and sector-specific funding patterns.
+Investment activity was concentrated in a small number of sectors, highlighting sector-specific funding patterns within the dataset.
 
 ### Geographic Concentration
 
-Funding activity was concentrated within major startup hubs, indicating regional dominance in startup investment activity.
+Funding activity was concentrated within a small number of startup hubs represented in the dataset.
 
 ### Investor Participation
 
-A limited group of investors accounted for a significant share of investment activity across the dataset.
+A limited group of investors accounted for a significant share of investment activity across the analyzed records.
 
 ### Funding Inequality
 
-Gini coefficient analysis revealed a highly unequal distribution of funding among startups, demonstrating significant capital concentration.
+Gini coefficient analysis revealed a highly unequal distribution of funding among startups in the dataset, demonstrating significant capital concentration.
 
 ---
 
@@ -150,9 +154,9 @@ Startup_eda_project.sql
 
 ## Business Value
 
-This analysis demonstrates how SQL can be used to transform startup funding data into actionable business insights.
+This project demonstrates how SQL can be used to transform raw business data into meaningful insights through exploratory analysis, statistical evaluation, and trend identification.
 
-The project helps evaluate:
+The analysis helps evaluate:
 
 * Capital allocation patterns
 * Funding concentration
@@ -179,6 +183,7 @@ Power BI dashboard development is currently in progress and will include:
 ## Tools Used
 
 * Microsoft SQL Server
+* SQL Server Management Studio
 * GitHub
 
 ---
