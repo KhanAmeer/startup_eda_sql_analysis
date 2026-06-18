@@ -101,13 +101,13 @@ Key SQL findings were visualised across four report pages:
 ## Dashboard Preview
 
 ### Overview
-![Overview](dashboard/screenshots/overview.png)
+![Overview](dashboard/screenshots/Overview.png)
 
 ### Sector and Ecosystem Analysis
 ![Sector Analysis](dashboard/screenshots/sector_analysis.png)
 
 ### Investor, Startup and Geographical Analysis
-![Geo Analysis](dashboard/screenshots/investor_geo_analysis.png)
+![Geographical Analysis](dashboard/screenshots/Investor, Startup and Geographical Analysis.png)
 
 ### 2025 Snapshot
 ![2025 Snapshot](dashboard/screenshots/snapshot_2025.png)
