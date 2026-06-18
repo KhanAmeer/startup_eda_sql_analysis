@@ -1,4 +1,4 @@
-# Startup Funding Analysis — SQL + Power BI
+# Startup Funding Analysis using SQL & Power BI
 
 ## Overview
 
