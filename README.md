@@ -91,10 +91,10 @@ Calculated:
 
 Key SQL findings were visualised across four report pages:
 
-* **Overview** — Headline KPIs, yearly funding trend, Gini coefficient
-* **Sector and Ecosystem Analysis** — Industry funding rankings and investment stage breakdown
-* **Investor, Startup and Geographical Analysis** — Top investors, top startups, city-level funding, dominant sector per city
-* **2025 Snapshot** — Partial year overview, projected full-year funding, H1 2024 vs H1 2025 comparison
+* **Overview** - Headline KPIs, yearly funding trend, Gini coefficient
+* **Sector and Ecosystem Analysis** - Industry funding rankings and investment stage breakdown
+* **Investor, Startup and Geographical Analysis** - Top investors, top startups, city-level funding, dominant sector per city
+* **2025 Snapshot** - Partial year overview, projected full-year funding, H1 2024 vs H1 2025 comparison
 
 ---
 
@@ -140,19 +140,19 @@ Key SQL findings were visualised across four report pages:
 
 ### Funding Concentration
 
-Top 10 startups absorbed a disproportionate share of total capital. The pattern mirrors the investor-level concentration seen across the dataset — a small group of participants dominated both sides of the funding table.
+Top 10 startups absorbed a disproportionate share of total capital. The pattern mirrors the investor-level concentration seen across the dataset, a small group of participants dominated both sides of the funding table.
 
 ### Funding Distribution
 
-Median deal size ($1.1M) was substantially lower than the mean ($24.88M), with standard deviation roughly 3x the mean. The average is an unreliable central measure for this dataset; median is used throughout the analysis.
+Median deal size ($1.1M) was substantially lower than the mean ($24.88M), with standard deviation roughly 3x the mean. The average is an unreliable central measure for this dataset, median is used throughout the analysis.
 
 ### Power Law Dynamics
 
-Deals over $100M were small in number but accounted for the majority of total funding — a classic power law distribution confirmed by the concentration checks.
+Deals over $100M were small in number but accounted for the majority of total funding, a classic power law distribution confirmed by the concentration checks.
 
 ### Sector Performance
 
-FoodTech received the highest total funding across 2020–2024, supported by consistently large deal sizes. Sector rankings shifted each year — no single industry dominated all five years. In 2025, Consumer Electronics emerged as the leading sector, a notable shift from the prior period.
+FoodTech received the highest total funding across 2020–2024, supported by consistently large deal sizes. Sector rankings shifted each year, no single industry dominated all five years. In 2025, Consumer Electronics emerged as the leading sector, a notable shift from the prior period.
 
 ### Geographic Concentration
 
@@ -160,11 +160,11 @@ Pune led total funding across the period. Bengaluru recorded strong deal volume 
 
 ### Funding Inequality
 
-Gini coefficient of 0.87 across 2020–2024, with per-year values ranging 0.85–0.89 — consistent across both the 2021 boom and the 2022–2023 slowdown. Removing the top 5 deals reduced the Gini by only 0.006, confirming the inequality is structural rather than outlier-driven.
+Gini coefficient of 0.87 across 2020–2024, with per-year values ranging 0.85–0.89, consistent across both the 2021 boom and the 2022–2023 slowdown. Removing the top 5 deals reduced the Gini by only 0.006, confirming the inequality is structural rather than outlier-driven.
 
 ### 2025 Snapshot
 
-84 deals recorded in H1 2025 with the highest median deal size across all years ($1.65M), suggesting a quality-over-quantity shift. Projected full-year funding of $5.70bn — slightly below 2024's $5.98bn but well above 2023.
+84 deals recorded in H1 2025 with the highest median deal size across all years ($1.65M), suggesting a quality-over-quantity shift. Projected full-year funding of $5.70bn, slightly below 2024's $5.98bn but well above 2023.
 
 ---
 
