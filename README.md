@@ -1,8 +1,8 @@
-# Startup Funding Analysis Using SQL
+# Startup Funding Analysis — SQL + Power BI
 
 ## Overview
 
-This project performs Exploratory Data Analysis (EDA) on a sample startup funding dataset using Microsoft SQL Server. The objective is to analyze funding trends, investment patterns, sector performance, investor activity, and funding concentration within the startup ecosystem.
+This project performs Exploratory Data Analysis (EDA) on a startup funding dataset using Microsoft SQL Server, with findings visualised in a Power BI report. The objective is to analyze funding trends, investment patterns, sector performance, investor activity, and funding concentration within the Indian startup ecosystem.
 
 The analysis goes beyond basic aggregations by incorporating statistical measures, funding distribution analysis, concentration metrics, and trend evaluation to generate business-oriented insights from funding data.
 
@@ -21,6 +21,7 @@ The analysis aims to answer the following business questions:
 * Which investors participate most actively in startup funding?
 * How evenly is capital distributed across startups?
 * What funding patterns exist across different investment stages?
+* How does 2025 compare to prior years at the same point in time?
 
 ---
 
@@ -28,13 +29,9 @@ The analysis aims to answer the following business questions:
 
 Source: Kaggle Startup Funding Dataset
 
-Dataset Link:
-
-https://www.kaggle.com/datasets/vagdevititikshag/indian-startup-funding-dataset-20202025
-
 This project uses a publicly available sample startup funding dataset obtained from Kaggle for educational and portfolio purposes.
 
-The primary objective of this project is to demonstrate SQL-based exploratory data analysis, analytical thinking, and business insight generation. The findings should be interpreted within the context of the sample dataset and are not intended to represent actual startup funding activity or market conditions.
+Dataset Link: https://www.kaggle.com/datasets/vagdevititikshag/indian-startup-funding-dataset-20202025
 
 The dataset contains information such as:
 
@@ -88,6 +85,32 @@ Calculated:
 * Funding distribution metrics
 * Funding concentration measures
 * Gini coefficient for inequality analysis
+* Sensitivity and robustness testing
+
+### 4. Power BI Dashboard
+
+Key SQL findings were visualised across four report pages:
+
+* **Overview** — Headline KPIs, yearly funding trend, Gini coefficient
+* **Sector and Ecosystem Analysis** — Industry funding rankings and investment stage breakdown
+* **Investor, Startup and Geographical Analysis** — Top investors, top startups, city-level funding, dominant sector per city
+* **2025 Snapshot** — Partial year overview, projected full-year funding, H1 2024 vs H1 2025 comparison
+
+---
+
+## Dashboard Preview
+
+### Overview
+![Overview](dashboard/screenshots/overview.png)
+
+### Sector and Ecosystem Analysis
+![Sector Analysis](dashboard/screenshots/sector_analysis.png)
+
+### Investor, Startup and Geographical Analysis
+![Geo Analysis](dashboard/screenshots/investor_geo_analysis.png)
+
+### 2025 Snapshot
+![2025 Snapshot](dashboard/screenshots/snapshot_2025.png)
 
 ---
 
@@ -102,33 +125,46 @@ Calculated:
 * Business Metric Development
 * Data Validation
 
+### SQL Techniques
+
+* Window functions (`ROW_NUMBER`, `DENSE_RANK`, `LAG`, `PERCENTILE_CONT`)
+* CTEs and subqueries
+* Conditional aggregation (`CASE WHEN`)
+* Year-over-year growth calculations
+* Gini coefficient implementation in SQL
+* Sensitivity and robustness testing
+
 ---
 
 ## Key Findings
 
 ### Funding Concentration
 
-Funding was highly concentrated among a relatively small number of startups within the sample dataset, indicating that a significant share of capital was allocated to a limited group of companies.
+Top 10 startups absorbed a disproportionate share of total capital. The pattern mirrors the investor-level concentration seen across the dataset — a small group of participants dominated both sides of the funding table.
 
 ### Funding Distribution
 
-Median funding values were substantially lower than average funding values, suggesting the presence of large funding outliers and an uneven distribution of capital.
+Median deal size ($1.1M) was substantially lower than the mean ($24.88M), with standard deviation roughly 3x the mean. The average is an unreliable central measure for this dataset; median is used throughout the analysis.
+
+### Power Law Dynamics
+
+Deals over $100M were small in number but accounted for the majority of total funding — a classic power law distribution confirmed by the concentration checks.
 
 ### Sector Performance
 
-Investment activity was concentrated in a small number of sectors, highlighting sector-specific funding patterns within the dataset.
+FoodTech received the highest total funding across 2020–2024, supported by consistently large deal sizes. Sector rankings shifted each year — no single industry dominated all five years. In 2025, Consumer Electronics emerged as the leading sector, a notable shift from the prior period.
 
 ### Geographic Concentration
 
-Funding activity was concentrated within a small number of startup hubs represented in the dataset.
-
-### Investor Participation
-
-A limited group of investors accounted for a significant share of investment activity across the analyzed records.
+Pune led total funding across the period. Bengaluru recorded strong deal volume but lower total capital, suggesting a higher frequency of smaller deals. Each city showed a clear dominant sector.
 
 ### Funding Inequality
 
-Gini coefficient analysis revealed a highly unequal distribution of funding among startups in the dataset, demonstrating significant capital concentration.
+Gini coefficient of 0.87 across 2020–2024, with per-year values ranging 0.85–0.89 — consistent across both the 2021 boom and the 2022–2023 slowdown. Removing the top 5 deals reduced the Gini by only 0.006, confirming the inequality is structural rather than outlier-driven.
+
+### 2025 Snapshot
+
+84 deals recorded in H1 2025 with the highest median deal size across all years ($1.65M), suggesting a quality-over-quantity shift. Projected full-year funding of $5.70bn — slightly below 2024's $5.98bn but well above 2023.
 
 ---
 
@@ -141,22 +177,29 @@ Startup_eda_project.sql
 ├── Funding Overview
 ├── Funding Distribution Analysis
 ├── Startup Concentration Analysis
-├── Funding Inequality Analysis
+├── Funding Inequality Analysis (Gini Coefficient)
 ├── Sensitivity Testing
+├── Robustness Check
 ├── Year-over-Year Trend Analysis
+├── Per-Year Gini Analysis
 ├── Sector Analysis
 ├── City Analysis
 ├── Investor Analysis
-└── Funding Stage Analysis
+├── Funding Stage Analysis
+└── 2025 Partial Year Analysis
+    ├── Mid-Year Overview
+    ├── Leading Industries 2025
+    ├── Annualised Projection
+    └── H1 2024 vs H1 2025 Comparison
 ```
 
 ---
 
 ## Business Value
 
-This project demonstrates how SQL can be used to transform raw business data into meaningful insights through exploratory analysis, statistical evaluation, and trend identification.
+This analysis demonstrates how SQL can be used to transform startup funding data into actionable business insights, and how those insights can be communicated clearly through a structured Power BI report.
 
-The analysis helps evaluate:
+The project helps evaluate:
 
 * Capital allocation patterns
 * Funding concentration
@@ -164,26 +207,14 @@ The analysis helps evaluate:
 * Sector attractiveness
 * Geographic funding distribution
 * Startup ecosystem characteristics
-
----
-
-## Future Enhancements
-
-Power BI dashboard development is currently in progress and will include:
-
-* Executive KPI Dashboard
-* Funding Trend Visualizations
-* Sector Performance Dashboard
-* Investor Analysis Dashboard
-* Geographic Funding Analysis
-* Funding Distribution Visualizations
+* Forward-looking funding trajectory
 
 ---
 
 ## Tools Used
 
 * Microsoft SQL Server
-* SQL Server Management Studio
+* Power BI Desktop
 * GitHub
 
 ---
@@ -191,10 +222,18 @@ Power BI dashboard development is currently in progress and will include:
 ## Repository Structure
 
 ```text
-startup-funding-analysis-sql/
+startup-funding-analysis/
 │
 ├── README.md
-└── Startup_eda_project.sql
+├── Startup_eda_project.sql
+│
+└── dashboard/
+    ├── Funding_dashboard.pbix
+    └── screenshots/
+        ├── overview.png
+        ├── sector_analysis.png
+        ├── investor_geo_analysis.png
+        └── snapshot_2025.png
 ```
 
 ---
